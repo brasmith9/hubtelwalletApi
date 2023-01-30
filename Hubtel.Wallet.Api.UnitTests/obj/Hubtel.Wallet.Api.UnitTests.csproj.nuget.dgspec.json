@@ -1,0 +1,180 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallet.Api.UnitTests/Hubtel.Wallet.Api.UnitTests.csproj": {}
+  },
+  "projects": {
+    "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallet.Api.UnitTests/Hubtel.Wallet.Api.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallet.Api.UnitTests/Hubtel.Wallet.Api.UnitTests.csproj",
+        "projectName": "Hubtel.Wallet.Api.UnitTests",
+        "projectPath": "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallet.Api.UnitTests/Hubtel.Wallet.Api.UnitTests.csproj",
+        "packagesPath": "/Users/isaac/.nuget/packages/",
+        "outputPath": "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallet.Api.UnitTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/isaac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallets.Api/Hubtel.Wallets.Api.csproj": {
+                "projectPath": "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallets.Api/Hubtel.Wallets.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[3.1.416.3, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.426/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallets.Api/Hubtel.Wallets.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallets.Api/Hubtel.Wallets.Api.csproj",
+        "projectName": "Hubtel.Wallets.Api",
+        "projectPath": "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallets.Api/Hubtel.Wallets.Api.csproj",
+        "packagesPath": "/Users/isaac/.nuget/packages/",
+        "outputPath": "/Users/isaac/Documents/C#-Projects/Hubtel.Wallets/Hubtel.Wallets.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/isaac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.18, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.426/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

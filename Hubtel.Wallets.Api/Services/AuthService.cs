@@ -73,8 +73,7 @@ namespace Hubtel.Wallets.Api.Services
         public async Task<object> ValidateOtpAsync(LoginDto loginData)
         {
             var response = new LoginResponse { Message = "", Status = "fail" };
-            var user = await _userManager.Users.SingleOrDefaultAsync(user =>
-                user.PhoneNumber.Equals(loginData.PhoneNumber.Trim()));
+            var user = await GetUserFromPhoneNumber(loginData.PhoneNumber);
 
             if (user.OtpCodeExpiry < DateTime.Now)
             {
@@ -104,7 +103,7 @@ namespace Hubtel.Wallets.Api.Services
 
         private async Task<AppUser?> GetUserFromPhoneNumber(string phoneNumber)
         {
-            return await _userManager.Users.SingleOrDefaultAsync(x => x.PhoneNumber.Equals(phoneNumber));
+            return await _userManager.Users.SingleOrDefaultAsync(x => x.PhoneNumber.Equals(phoneNumber.Trim()));
         }
 
 

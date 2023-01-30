@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/isaac/.dotnet/store/|arch|/|tfm|",
+      "/Users/isaac/.nuget/packages"
+    ]
+  }
+}

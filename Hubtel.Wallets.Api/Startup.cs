@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Net.Mime;
 using System.Text;
 using Hubtel.Wallets.Api.DAL;
 using Hubtel.Wallets.Api.DAL.Entities;
@@ -6,7 +8,9 @@ using Hubtel.Wallets.Api.Interfaces;
 using Hubtel.Wallets.Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -81,6 +85,34 @@ namespace Hubtel.Wallets.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler(exceptionHandlerApp =>
+                {
+                    exceptionHandlerApp.Run(async context =>
+                    {
+                        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+                        // using static System.Net.Mime.MediaTypeNames;
+                        context.Response.ContentType = MediaTypeNames.Text.Plain;
+
+                        await context.Response.WriteAsync("An exception was thrown.");
+
+                        var exceptionHandlerPathFeature =
+                            context.Features.Get<IExceptionHandlerPathFeature>();
+
+                        if (exceptionHandlerPathFeature?.Error is FileNotFoundException)
+                        {
+                            await context.Response.WriteAsync(" The file was not found.");
+                        }
+
+                        if (exceptionHandlerPathFeature?.Path == "/")
+                        {
+                            await context.Response.WriteAsync(" Page: Home.");
+                        }
+                    });
+                });
             }
 
             app.UseSwagger();
